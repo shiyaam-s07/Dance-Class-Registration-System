@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Stage photo with balanced ambient overlay */
+    background: 
+        linear-gradient(rgba(10, 8, 20, 0.45), rgba(10, 8, 20, 0.70)),
+        url('bg-dance.png') no-repeat center center fixed;
+    background-size: cover;
+    
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #f8fafc;
+    min-height: 100vh;
+    padding: 30px 15px 50px 15px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Background Stage Light Accents */
+.spotlight {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    filter: blur(130px);
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 0;
+}
+.spotlight-pink {
+    top: 5%;
+    left: 10%;
+    background: #f43f5e;
+}
+.spotlight-purple {
+    bottom: 10%;
+    right: 15%;
+    background: #8b5cf6;
+}
+.spotlight-amber {
+    top: 40%;
+    left: 50%;
+    background: #fbbf24;
+}
+
+/* Header Section */
+.page-title {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 25px;
+}
+
+.music-pills {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.pill-chip {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #fda4af;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+.page-title h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #ffffff 20%, #f43f5e 60%, #fb923c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 6px;
+    text-shadow: 0 0 35px rgba(244, 63, 94, 0.35);
+}
+
+.page-title p {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #cbd5e1;
+    font-weight: 600;
+}
+
+/* --- True Frosted Glass Unified Container --- */
+.container {
+    max-width: 1060px;
+    width: 92%;
+    margin: 25px auto 40px auto;
+    display: flex;
+    border-radius: 28px;
+    
+    /* 1. Translucent frosted surface */
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.12) 0%,
+        rgba(255, 255, 255, 0.03) 100%
+    );
+    
+    /* 2. Glass blur + vivid lighting saturation */
+    backdrop-filter: blur(28px) saturate(190%);
+    -webkit-backdrop-filter: blur(28px) saturate(190%);
+    
+    /* 3. Refractive glass edge highlights */
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-top: 1px solid rgba(255, 255, 255, 0.42);
+    border-left: 1px solid rgba(255, 255, 255, 0.35);
+    
+    /* 4. Deep ambient shadow + top specular reflection */
+    box-shadow: 
+        0 35px 70px rgba(0, 0, 0, 0.55),
+        inset 0 1px 1.5px rgba(255, 255, 255, 0.5);
+    
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+
+/* Left Hero Box (Transparent so the glass shines through) */
+.image-box {
+    width: 48%;
+    background: transparent;
+    padding: 42px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+.dancer-photo {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(244, 63, 94, 0.25);
+}
+
+.floating-badge {
+    position: absolute;
+    background: rgba(15, 12, 28, 0.45);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.badge-top {
+    top: 14px;
+    left: 14px;
+    border-color: rgba(244, 63, 94, 0.5);
+    color: #fda4af;
+}
+.badge-bottom {
+    bottom: 14px;
+    right: 14px;
+    border-color: rgba(139, 92, 246, 0.5);
+    color: #c4b5fd;
+}
+
+.image-box h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #ffffff, #fbcfe8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.image-box p {
+    font-size: 13.5px;
+    color: #e2e8f0;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+.genre-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.tag {
+    background: rgba(255, 255, 255, 0.08);
+    color: #f1f5f9;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Right Form Box (Transparent so the glass shines through) */
+.form-box {
+    width: 52%;
+    padding: 42px 40px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-header {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-header h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.form-header p {
+    font-size: 13px;
+    color: #cbd5e1;
+}
+
+.form-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #f1f5f9;
+    letter-spacing: 0.3px;
+}
+
+/* --- Frosted Glass Inputs and Dropdowns --- */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 11px 15px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+    font-size: 13.5px;
+    color: #ffffff;
+    outline: none;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.25s ease;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 13px;
+}
+
+select option {
+    background-color: #100d1e;
+    color: #ffffff;
+}
+
+input:focus,
+select:focus {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(244, 63, 94, 0.65);
+    box-shadow: 0 0 16px rgba(244, 63, 94, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.35);
+}
+
+/* Submit Button */
+button {
+    margin-top: 10px;
+    padding: 14px;
+    background: linear-gradient(135deg, #d3949f 0%, #ec5ca4 50%, #966cf8 100%);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(244, 63, 94, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+    transition: all 0.25s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(244, 63, 94, 0.65);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Responsive on Mobile */
+@media (max-width: 860px) {
+    .container {
+        flex-direction: column;
+    }
+    .image-box, .form-box {
+        width: 100%;
+    }
+    .image-box {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 30px 20px;
+    }
+    .form-box {
+        padding: 30px 20px;
+    }
+}

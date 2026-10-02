@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beat Craft Academy</title>
+    <!-- Google Fonts for a stylish modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Stage Lighting Background Glows -->
+    <div class="spotlight spotlight-pink"></div>
+    <div class="spotlight spotlight-purple"></div>
+    <div class="spotlight spotlight-amber"></div>
+
+    <!-- Main Title Header -->
+    <div class="page-title">
+        <div class="music-pills">
+            <span class="pill-chip">🎵 FEEL THE BEAT</span>
+            <span class="pill-chip">✨ LIVE YOUR PASSION</span>
+        </div>
+        <h1>Beat Craft Academy</h1>
+        <p>OFFICIAL STUDENT REGISTRATION PORTAL</p>
+    </div>
+
+    <!-- Main 2-Column Card -->
+    <div class="container">
+        
+        <!-- Left Side: Dance Stage & Visual Highlights -->
+        <div class="image-box">
+            <div class="image-wrapper">
+                <!-- High-res vibrant dancer photo -->
+                <img src="https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=700&auto=format&fit=crop&q=80" alt="Dancer on Stage" class="dancer-photo">
+                <div class="floating-badge badge-top">🩰 Classical & Western</div>
+                <div class="floating-badge badge-bottom">🔥 Master Classes</div>
+            </div>
+
+            <h2>Ignite Your Rhythm</h2>
+            <p>
+                Step into the spotlight. Master hip-hop, classical, contemporary, and salsa under certified choreographers.
+            </p>
+
+            <!-- Dance Styles Pills -->
+            <div class="genre-tags">
+                <span class="tag">💃 Bharatanatyam</span>
+                <span class="tag">🕺 Hip-Hop</span>
+                <span class="tag">✨ Contemporary</span>
+                <span class="tag">⚡ Salsa & Latin</span>
+            </div>
+        </div>
+
+        <!-- Right Side: Vibrant Registration Form -->
+        <div class="form-box">
+            <div class="form-header">
+                <h2>Join the Academy</h2>
+                <p>Fill out your details to book your audition slot</p>
+            </div>
+
+            <form action="" id="danceform">
+                <div class="input-field">
+                    <label for="dancername">👤 Dancer Name</label>
+                    <input id="dancername" name="dancername" type="text" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="email">✉️ Email Address</label>
+                    <input id="email" name="email" type="email" placeholder="dancer@example.com" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="phone">📞 Phone Number</label>
+                    <input id="phone" name="phone" type="tel" placeholder="10-digit mobile number" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="danceStyle">🎭 Dance Style</label>
+                    <select name="danceStyle" id="danceStyle" required>
+                        <option value="">Choose your dance form</option>
+                        <option value="Classical / Bharatanatyam">Classical / Bharatanatyam</option>
+                        <option value="Hip-Hop / Street">Hip-Hop / Street Dance</option>
+                        <option value="Contemporary">Contemporary / Lyrical</option>
+                        <option value="Salsa & Bachata">Salsa & Bachata</option>
+                        <option value="Bollywood Freestyle">Bollywood Freestyle</option>
+                    </select>
+                </div>
+
+                <div class="input-field">
+                    <label for="skillLevel">🏆 Skill Level</label>
+                    <select name="skillLevel" id="skillLevel" required>
+                        <option value="">Select your experience level</option>
+                        <option value="Beginner (Level 1)">Beginner (New to Dance)</option>
+                        <option value="Intermediate (Level 2)">Intermediate (1-2 yrs experience)</option>
+                        <option value="Advanced / Pro (Level 3)">Advanced / Professional Performer</option>
+                    </select>
+                </div>
+
+                <div class="input-field">
+                    <label for="batchTiming">⏰ Preferred Batch</label>
+                    <select name="batchTiming" id="batchTiming" required>
+                        <option value="">Select your training slot</option>
+                        <option value="Morning (6:30 AM - 8:00 AM)">Morning Batch (6:30 AM - 8:00 AM)</option>
+                        <option value="Evening (5:30 PM - 7:00 PM)">Evening Batch (5:30 PM - 7:00 PM)</option>
+                        <option value="Night (7:30 PM - 9:00 PM)">Night Batch (7:30 PM - 9:00 PM)</option>
+                        <option value="Weekend Intensive (Sat & Sun)">Weekend Intensive (Sat & Sun)</option>
+                    </select>
+                </div>
+
+                <div class="input-field">
+                    <label for="city">📍 City</label>
+                    <input id="city" name="city" type="text" placeholder="e.g. Madurai, Chennai, Coimbatore" required>
+                </div>
+
+                <button type="submit" id="submitBtn">
+                    <span>✨ Confirm Dance Registration</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
