@@ -43,7 +43,7 @@ Dance-Class-Registration-System/
 │   ├── src/              # Spring Boot application code and entity mapping
 │   └── pom.xml           # Maven project dependencies
 └── README.md             # Project documentation
-
+```
 ---
 
 ## 🛠️ Database Setup
@@ -53,3 +53,4 @@ Ensure MySQL is running, then run the following in MySQL Workbench:
 ```sql
 CREATE DATABASE IF NOT EXISTS dance_academy;
 USE dance_academy;
+```
